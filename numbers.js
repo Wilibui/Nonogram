@@ -1,3 +1,42 @@
+function setupNumbers(){
+  let Ynums = 0; 
+  for (let i = 0; i <10; i++) {    
+    for (let j = 0; j <10; j++) {
+      if (level[i][j] == 1) {
+        Ynums++;
+      } else if (level[i][j] == 2) {
+        if (Ynums != 0) {         
+          append(Ynumbers[i], Ynums);
+          Ynums = 0;
+        }
+      }
+    }
+    if (Ynums != 0) {         
+      append(Ynumbers[i], Ynums);
+      Ynums = 0;
+    }
+  }
+  
+  let Xnums = 0; 
+  for (let i = 0; i <10; i++) {    
+    for (let j = 0; j <10; j++) {
+      print(Xnums);
+      if (level[j][i] == 1) {
+        Xnums++;
+      } else if (level[j][i] == 2) {
+        if (Xnums != 0) {         
+          append(Xnumbers[i], Xnums);
+          Xnums = 0;
+        }
+      }
+    }
+    if (Xnums != 0) {         
+      append(Xnumbers[i], Xnums);
+      Xnums = 0;
+    }
+  }
+}
+
 function showNumbers() {
   for (let i = 0; i < 10; i++) {    
     fill(50, 200, 255, 200);
