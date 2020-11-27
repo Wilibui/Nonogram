@@ -7,6 +7,7 @@ function wrong(x, y) {
 }
 function showWrong() {
   stroke(0);
+  strokeWeight(w / 10);
   fill(255, 0, 0, wrongA);
   square(wrongSquare[1], wrongSquare[2], w);
   wrongA -= 3;

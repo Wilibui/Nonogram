@@ -9,6 +9,8 @@ let lives = 3;
 let wrongSquare = [0, 0];
 let wrongA = 255;
 let running = true;
+let death = false;
+
 
 function setup() {
   rectMode(CENTER, CENTER);
@@ -20,22 +22,33 @@ function setup() {
 }
 
 function draw() {
-  background(255);  
-
   setupCanvas();
+  background(200);
+  
+  showNumbers();
   showGrid();
-  showNumbers(); 
+   
   showCurrent();
   showWrong();
   showLives();
-
-
-  checkIfDone();
+  
+  if(death){
+    gameOver();
+  }
+  
+  checkIfWin();
 }
 
 function mousePressed() {
   if (running) {
     checkGrid();
     checkCurrent();
+  }else{
+    checkAgain();
+  }
+}
+function mouseDragged(){
+  if (running) {
+    checkGrid();
   }
 }

@@ -19,6 +19,11 @@ function showGrid() {
       grid[i][j].show();
     }
   }
+  strokeWeight(w / 7);
+  noFill();
+  line(w * 9.5, w * 4.5, w * 9.5, w * 14.5);
+  line(w * 4.5, w * 9.5, w * 14.5, w * 9.5);
+  square(w * 9.5, w * 9.5, w * 10);  
 }
 
 function checkGrid() {
@@ -40,7 +45,7 @@ class Grid {
   }
   show() {    
     stroke(0);
-    strokeWeight(w / 10);
+    strokeWeight(w / 20);
 
     if (currentGrid[this.i][this.j] == 0) {      
       fill(255);

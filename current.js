@@ -13,23 +13,27 @@ function setupCurrentGrid() {
   ];
 }
 function showCurrent() {
-  fill(100);
-  rect(9.5 * w, 16 * w, 2 * w, w, 50);
-  fill(0);
+  fill(50, 200, 255, 200);
+  noStroke();
+  rect(8 * w, 16.5 * w, 4 * w, 2 * w, 255);
+  fill(50, 255, 50, 200);
+  
   if (current == 1) {
-    square(9 * w, 16 * w, w, 50);
+    circle(7 * w, 16.5 * w, 2.25 * w);
   } else {
-    square(10 * w, 16 * w, w, 50);
+    circle(9 * w, 16.5 * w, 2.25 * w);
   }
+  
   fill(20, 0, 200);
-  square(9 * w, 16 * w, 0.5 * w);
   stroke(20, 0, 200);
-  line(9.8 * w, 15.8 * w, 10.2 * w, 16.2 * w);
-  line(10.2 * w, 15.8 * w, 9.8 * w, 16.2 * w);
+  strokeWeight(0.2 * w);
+  square(7 * w, 16.5 * w, 1 * w, 10);  
+  line(8.5 * w, 16 * w, 9.5 * w, 17 * w);
+  line(8.5 * w, 17 * w, 9.5 * w, 16 * w);
 }
 function checkCurrent() {
-  if (mouseX > 10 * w  - w && mouseX < 10 * w + w) {
-    if (mouseY > 16 * w  - w / 2 && mouseY < 16 * w + w / 2) {
+  if (mouseX > 8 * w  - 2 * w && mouseX < 8 * w + 2 *  w) {
+    if (mouseY > 16.5 * w  - w && mouseY < 16.5 * w + w) {
       if (current == 1) {
         current = 2;
       } else {
