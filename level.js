@@ -1,3 +1,4 @@
 function setupLevel() {  
-  level = Levels[round(random(Levels.length - 1))];
+  l = round(random(Levels.length - 1));
+  level = Levels[l];
 }

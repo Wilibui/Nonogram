@@ -1,18 +1,6 @@
-let level = [
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[],
-[],[],[],[],[],[],[],[],[],[]
-];
+let level = [];
 
 let Ynumbers = [[],[],[],[],[],[],[],[],[],[]];
-
 let Xnumbers = [[],[],[],[],[],[],[],[],[],[]];
 
 let currentGrid = [];
@@ -21,6 +9,7 @@ let grid = [[], []];
 let w;
 let current = 1;
 let lives = 3;
+let l;
 
 let wrongSquare = [0, 0];
 let wrongA = 255;
@@ -43,17 +32,17 @@ function draw() {
   background(200);
   
   showNumbers();
-  showGrid();
-   
+  showGrid();  
   showCurrent();
   showWrong();
   showLives();
+  showTrademark();
   
   if(death){
     gameOver();
   }
   
-  checkIfWin();
+  checkIfWin();  
 }
 
 function mousePressed() {
@@ -68,4 +57,13 @@ function mouseDragged(){
   if (running) {
     checkGrid();
   }
+}
+
+function showTrademark(){
+  textAlign(LEFT, BOTTOM);
+  textSize(0.5 * w);
+  noStroke();
+  fill(0);
+  text("Made By Wilibui", 0.2 * w, height - 0.2 * w);
+  textAlign(CENTER, CENTER);
 }

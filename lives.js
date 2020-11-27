@@ -1,5 +1,7 @@
 function showLives() {
   fill(0);
+  strokeWeight(w / 7);
+  stroke(0);
   
   if(lives == 3){
     fill(255, 0, 0);  
