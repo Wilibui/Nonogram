@@ -1,4 +1,7 @@
 function setupNumbers() {
+  Ynumbers = [[],[],[],[],[],[],[],[],[],[]];
+  Xnumbers = [[],[],[],[],[],[],[],[],[],[]];
+
   let Ynums = 0; 
   for (let i = 0; i <10; i++) {    
     for (let j = 0; j <10; j++) {
@@ -20,7 +23,6 @@ function setupNumbers() {
   let Xnums = 0; 
   for (let i = 0; i <10; i++) {    
     for (let j = 0; j <10; j++) {
-      print(Xnums);
       if (level[j][i] == 1) {
         Xnums++;
       } else if (level[j][i] == 2) {
